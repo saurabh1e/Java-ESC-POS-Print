@@ -50,5 +50,15 @@ Printer Size is used to set the value of **divider** and **Horizontal Tab**.
 | THREE_HT  | Three Horizontal Tabs  |
 | DIV  | Divider Line  |
 
+----------
+
 ## ScreenShots
 
+> Sits nicely in task bar
+
+![Alt text](screenshots/Screenshot_2018-03-10_11-05-07.png?raw=true "Task bar")
+
+
+> Logs commands sent
+
+![Alt text](screenshots/Screenshot_2018-03-10_11-06-05.png?raw=true "GUI")
