@@ -1,142 +1,55 @@
----
+
+# Java ESC/POS Print Utility  
+  
 
 
----
+----------
 
-<h1 id="java-escpos-print-utility">Java ESC/POS Print Utility</h1>
-<hr>
-<p>This utility runs a server on port 7655 and accepts post request with json as follow:</p>
-<pre class=" language-json"><code class="prism  language-json"><span class="token punctuation">{</span><span class="token string">"type"</span><span class="token punctuation">:</span><span class="token string">"INVOICE"</span><span class="token punctuation">,</span><span class="token string">"nameOfPrinter"</span><span class="token punctuation">:</span><span class="token string">"Epson"</span><span class="token punctuation">,</span><span class="token string">"content"</span><span class="token punctuation">:</span><span class="token string">"&lt;CTL_LF&gt;HEADER&lt;TXT_ALIGN_CT&gt;&lt;DIV&gt;&lt;CTL_LF&gt;&lt;DIV&gt;"</span><span class="token punctuation">,</span> <span class="token string">"printerSize"</span><span class="token punctuation">:</span> <span class="token number">58</span><span class="token punctuation">}</span>  
-</code></pre>
-<p>This will print the value of <b>content</b> passed json using the printer with name <b>Epson</b>.<br>
-Printer Size is used to set the value of <b>divider<b> and <b>Horizontal Tab</b>.</b></b></p>
-<hr>
-<h2 id="available-tags">Available Tags</h2>
 
-<table>
-<thead>
-<tr>
-<th>Tag</th>
-<th>Value</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>CTL_LF</td>
-<td>Print and line feed</td>
-</tr>
-<tr>
-<td>CAN_HT</td>
-<td>Cancel Horizontal Tab</td>
-</tr>
-<tr>
-<td>HT</td>
-<td>Horizontal Tab</td>
-</tr>
-<tr>
-<td>LINE_SPACE_24</td>
-<td>Set the line spacing at 24</td>
-</tr>
-<tr>
-<td>LINE_SPACE_30</td>
-<td>Set the line spacing at 30</td>
-</tr>
-<tr>
-<td>SELECT_BIT_IMAGE_MODE</td>
-<td>Image</td>
-</tr>
-<tr>
-<td>HW_INIT</td>
-<td>Printer hardware Clear data in buffer and reset modes</td>
-</tr>
-<tr>
-<td>CD_KICK_2</td>
-<td>Cash Drawer Sends a pulse to pin 2</td>
-</tr>
-<tr>
-<td>CD_KICK_5</td>
-<td>Cash Drawer Sends a pulse to pin 5</td>
-</tr>
-<tr>
-<td>PAPER_FULL_CUT</td>
-<td>Full cut paper</td>
-</tr>
-<tr>
-<td>PAPER_PART_CUT</td>
-<td>Partial cut paper</td>
-</tr>
-<tr>
-<td>TXT_NORMAL</td>
-<td>Normal text</td>
-</tr>
-<tr>
-<td>TXT_2HEIGHT</td>
-<td>Double height text</td>
-</tr>
-<tr>
-<td>TXT_2WIDTH</td>
-<td>Double width text</td>
-</tr>
-<tr>
-<td>TXT_4SQUARE</td>
-<td>Quad area text</td>
-</tr>
-<tr>
-<td>TXT_UNDERL_OFF</td>
-<td>Underline font OFF</td>
-</tr>
-<tr>
-<td>TXT_UNDERL_ON</td>
-<td>Underline font 1-dot ON</td>
-</tr>
-<tr>
-<td>TXT_UNDERL2_ON</td>
-<td>Underline font 2-dot ON</td>
-</tr>
-<tr>
-<td>TXT_BOLD_OFF</td>
-<td>Bold font OFF</td>
-</tr>
-<tr>
-<td>TXT_BOLD_ON</td>
-<td>Bold font ON</td>
-</tr>
-<tr>
-<td>TXT_FONT_A</td>
-<td>Font type A</td>
-</tr>
-<tr>
-<td>TXT_FONT_B</td>
-<td>Font type B</td>
-</tr>
-<tr>
-<td>TXT_ALIGN_LT</td>
-<td>Left justification</td>
-</tr>
-<tr>
-<td>TXT_ALIGN_CT</td>
-<td>Center justification</td>
-</tr>
-<tr>
-<td>TXT_ALIGN_RT</td>
-<td>Right justification</td>
-</tr>
-<tr>
-<td>LEFT_MARGIN</td>
-<td>Left Margin</td>
-</tr>
-<tr>
-<td>TWO_HT</td>
-<td>Two Horizontal Tabs</td>
-</tr>
-<tr>
-<td>THREE_HT</td>
-<td>Three Horizontal Tabs</td>
-</tr>
-<tr>
-<td>DIV</td>
-<td>Divider Line</td>
-</tr>
-</tbody>
-</table><h2 id="screenshots">ScreenShots</h2>
+This utility runs a server on port 7655 and accepts post request with json as follow:  
+  
+```json  
+{"type":"INVOICE","nameOfPrinter":"Epson","content":"<CTL_LF>HEADER<TXT_ALIGN_CT><DIV><CTL_LF><DIV>", "printerSize": 58}  
+```  
+This will print the value of <b>content</b> passed json using the printer with name <b>Epson</b>.
+Printer Size is used to set the value of <b>divider<b> and <b>Horizontal Tab</b>.
+
+
+----------
+## Available Tags
+
+| Tag | Value |
+| ------------- | ------------- |
+| CTL_LF  | Print and line feed  |
+| CAN_HT  | Cancel Horizontal Tab  |
+| HT  | Horizontal Tab |
+| LINE_SPACE_24  | Set the line spacing at 24  |
+| LINE_SPACE_30  | Set the line spacing at 30 |
+| SELECT_BIT_IMAGE_MODE  | Image  |
+| HW_INIT  | Printer hardware Clear data in buffer and reset modes |
+| CD_KICK_2  | Cash Drawer Sends a pulse to pin 2 |
+| CD_KICK_5  | Cash Drawer Sends a pulse to pin 5 |
+| PAPER_FULL_CUT  | Full cut paper  |
+| PAPER_PART_CUT  | Partial cut paper  |
+| TXT_NORMAL  | Normal text |
+| TXT_2HEIGHT  | Double height text  |
+| TXT_2WIDTH  | Double width text |
+| TXT_4SQUARE  | Quad area text  |
+| TXT\_UNDERL\_OFF  | Underline font OFF  |
+| TXT\_UNDERL\_ON  | Underline font 1-dot ON  |
+| TXT\_UNDERL2\_ON  | Underline font 2-dot ON  |
+| TXT\_BOLD\_OFF  | Bold font OFF  |
+| TXT\_BOLD\_ON  | Bold font ON  |
+| TXT\_FONT\_A  | Font type A  |
+| TXT\_FONT\_B  | Font type B  |
+| TXT\_ALIGN\_LT  | Left justification  |
+| TXT\_ALIGN\_CT  | Center justification  |
+| TXT\_ALIGN\_RT  | Right justification  |
+| LEFT_MARGIN  | Left Margin  |
+| TWO_HT  | Two Horizontal Tabs  |
+| THREE_HT  | Three Horizontal Tabs  |
+| DIV  | Divider Line  |
+
+## ScreenShots
+
 
